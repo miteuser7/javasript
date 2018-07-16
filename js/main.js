@@ -29,6 +29,6 @@ var totalamount=0;
     }
     totalamount=minamount+amount;
     message="total bill amount is:"+totalamount;
-      document.getElementById("ans").innerHTML=message;
+      document.getElementById("ans").innerHTML=+message;
 }
    

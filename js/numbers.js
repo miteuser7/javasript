@@ -19,7 +19,8 @@ function checkPrime(){
     }
     else{
         showResult("given number is not prime= "+num+" is prime");
-    }
+    }   
+    
 }
 function factorial(){
     num=getuserInput();
@@ -70,6 +71,68 @@ function fibonacci(){
     
     
 }
+function reverse(){
+ num=getuserInput();
+    var rev=0,r;
+    while(num!=0)
+        {
+    r=num%10;
+    rev=(rev*10)+r;
+    num=Math.floor(num/10);
+}
+   showResult("reverse of number is "+rev);    
+}
+function palindrome(){
+  var num=getuserInput();
+    var rev=0;
+   
+    var num2=num;
+    while(num!=0)
+        {
+          r=Math.floor(num%10);
+    rev=(rev*10)+r;
+    num=Math.floor(num/10);   
+        }
+   
+    if(num2==rev)
+       {
+        showResult("it's palindrome ");    
+       }
+    else{
+        showResult("it's not a palindrome ");
+    }
+       
+        
+        
+        
+   
+}
+function sumofdigit(){
+    var num=getuserInput();
+   sum=0;
+    while(num!=0)
+        {
+            sum+=num%10;
+            num=Math.floor(num/10);
+        }
+      showResult("sum of digit is:="+sum);
+    
+}
+function sum(){
+   var num=getuserInput();
+    sum=num;
+    while(num>9){
+        sum=Math.floor(num/10)+num%10;
+        num=sum;
+    }
+    showResult("sum is:="+sum); 
+}
+
+    
+    
+    
+    
+    
 function getuserInput(){
  num= document.getElementById("num").value;
     return num;
